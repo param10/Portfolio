@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Param's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='ProfilePic.jpg') }}" alt="Profile Picture">
+                <h2>Param Jaswal</h2>
+                <p>Data Analyst | Data Engineer</p>
+                <p class="catchy-phrase">Turning data into actionable insights one byte at a time.</p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Canada
+                </div>
+            </div>
+            
+            <div class="nav-links">
+                <div class="nav-card" id="nav-summary">
+                    <a href="#summary">Professional Summary</a>
+                </div>
+                <div class="nav-card" id="nav-skills">
+                    <a href="#skills">Technical Skills</a>
+                </div>
+                <div class="nav-card" id="nav-experience">
+                    <a href="#experience">Work Experience</a>
+                </div>
+                <div class="nav-card" id="nav-education">
+                    <a href="#education">Education</a>
+                </div>
+                <div class="nav-card" id="nav-achievements">
+                    <a href="#achievements">Achievements</a>
+                </div>
+            </div>
+            
+            <a href="{{ url_for('static', filename='Resume.pdf') }}" class="resume-button" download>Download Resume</a>
+
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/he_is_apirate" target="_blank">
+                    <img src="{{ url_for('static', filename='insta.png') }}" alt="Instagram">
+                </a>
+                <a href="https://github.com/param10" target="_blank">
+                    <img src="{{ url_for('static', filename='git.png') }}" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/param-jaswal/" target="_blank">
+                    <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn">
+                </a>
+            </div>
+
+
+            <a href="{{ url_for('contact') }}" class="contact-button">Contact Me</a>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <div class="fixed-image-container">
+                <img src="{{ url_for('static', filename='meme1.png') }}" id="fixed-image" alt="Meme Image">
+            </div>
+
+            <section id="summary" class="section">
+                <img src="{{ url_for('static', filename='meme0.png') }}" alt="Professional Summary Visual" class="section-visual">
+                <div class="section-content">
+                    <h2 class="section-title">Professional Summary</h2>As a seasoned Analyst with over 3.5 years under my belt, I have a knack for turning complex data puzzles into clear, actionable strategies that fuel business growth. Whether it's boosting customer loyalty, smashing sales goals, or fine-tuning marketing tactics, I'm your go-to for data-driven success. Fluent in Python, SQL, and Tableau, I'm all about diving into the data to uncover insights that make a difference. My insatiable curiosity keeps me on my toes, always eager to learn and embrace new technologies. I'm on the lookout for fresh opportunities where I can flex my analytical muscles and push the boundaries of what's possible.
+                <br> <br>
+                    And just for kicks: Why did the data analyst bring a ladder to work? Because they wanted to reach the high levels of data! 🚀</p>
+                </div>
+            </section>
+            <section id="skills" class="section">
+                <div class="section-content">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <ul>
+                        <li>Languages & Frameworks:
+
+                            •	🐍 Python
+                            •	📊 R
+                            •	💻 C, C#
+                            •	☕ Java
+                            •	🌐 JavaScript
+                            •	🌟 Flask, Django
+                            •	🖥️ Shell Scripting</li>
+                        <li>Database & Web Development:
+
+                            •	🗄️ MySQL, PostgreSQL, SQL Server
+                            •	🌐 HTML, CSS
+                            •	📊 Excel</li>
+                        <li>Cloud & DevOps:
+
+                            •	☁️ AWS, Azure
+                            •	🐳 Docker
+                            •	🛠️ Git</li>
+                        <li>Tools & Services:
+
+                            •	📊 PowerBI, Tableau
+                            •	🔗 REST API, RESTful services
+                            •	📄 JSON
+                            •	🕷️ Data Scraping
+                            •	📈 PowerPoint</li>
+                        <li>Libraries & Technologies:
+
+                            •	🕸️ Scrapy
+                            •	📉 scikit-learn
+                            •	📊 matplotlib, NumPy, Pandas
+                            •	📚 NLTK
+                            •	🔥 PySpark
+                            •	🤖 TensorFlow, Keras
+                            •	🧪 SciPy
+                            •	👁️ OpenCV
+                        </li>
+                    </ul>
+
+
+
+
+                    
+                </div>
+            </section>
+            <section id="experience" class="section">
+                <div class="section-content">
+                    <h2 class="section-title">Work Experience</h2>
+            
+                    <div class="container">
+                        <div class="job">
+                            <h3>Data Analyst, Divine Group of Companies, Canada</h3>
+                            <p><strong>Sept 2022 – Apr 2024</strong></p>
+                            <p><strong>Project:</strong> Sales Performance Enhancement & Customer Retention Initiative</p>
+                            <p>Implemented data-driven strategies using Python, Excel, and Tableau to surpass sales targets by 11% and boost customer retention by 15%.</p>
+                            <ul>
+                                <li>📊 Analyzed sales data, leading to an 11% increase in quarterly sales.</li>
+                                <li>📈 Identified high-risk churn factors, improving retention by 15%.</li>
+                                <li>🎯 Pinpointed high-value customer segments, driving targeted marketing.</li>
+                                <li>📉 Created Tableau dashboards for key metric tracking.</li>
+                                <li>🛠️ Applied Azure, SQL Server, and Power BI to enhance project outcomes.</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="job">
+                            <h3>Data Science Intern, Netmax Solutions, India</h3>
+                            <p><strong>Mar 2021 – Aug 2021</strong></p>
+                            <p><strong>Project:</strong> Data Processing Optimization & Predictive Modeling</p>
+                            <p>Enhanced data processing by 21% and achieved 90% model accuracy, leading to improved decision-making and reporting efficiency.</p>
+                            <ul>
+                                <li>🔄 Refined data processing, boosting efficiency by 21%.</li>
+                                <li>📊 Achieved 90% accuracy in decision tree models.</li>
+                                <li>☁️ Designed a scalable data warehouse using Azure and SQL.</li>
+                                <li>📈 Improved reporting efficiency by 17%.</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="job">
+                            <h3>Python Developer/Analyst, Shor in the City, India</h3>
+                            <p><strong>Apr 2020 – Feb 2021</strong></p>
+                            <p><strong>Project:</strong> User Engagement Enhancement Initiative</p>
+                            <p>Boosted user acquisition by 25% and engagement by 35% through data analysis and strategic optimization.</p>
+                            <ul>
+                                <li>📈 Increased user acquisition by 25% using Analytics and Salesforce API.</li>
+                                <li>🎯 Enhanced engagement by 35% via real-time monitoring and A/B testing.</li>
+                                <li>📊 Used Python for advanced data visualization, improving product performance by 15%.</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="job">
+                            <h3>Developer Intern, Ommzi Pvt Ltd, India</h3>
+                            <p><strong>Sept 2019 – Mar 2020</strong></p>
+                            <p><strong>Project:</strong> ArcherQuest</p>
+                            <p>Led the development of a game with over 100,000 downloads, improving user experience and reducing bugs by 20%.</p>
+                            <ul>
+                                <li>🎮 Developed and deployed ArcherQuest with 100,000+ downloads.</li>
+                                <li>🔧 Reduced game bugs by 20% through C# scripting optimizations.</li>
+                                <li>📊 Analyzed user data, enhancing game features and satisfaction.</li>
+                            </ul>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+            <section id="education" class="section">
+                <div class="section-content">
+                    <h2 class="section-title">Education</h2>
+                    <div class="container">
+                        <div class="education-item">
+                            <h3>📕Post Graduate Diploma in Predictive Analysis</h3>
+                            <p><strong>📚Conestoga College, Canada</strong> | Sept 2022 – Apr 2023</p>
+                            <p>Achieved Dean's List recognition for academic excellence. Key courses included Predictive Modeling, Machine Learning, and Data Mining.</p>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="education-item">
+                            <h3>📗Post Graduate Diploma in Applied A.I. Solutions</h3>
+                            <p><strong>📚George Brown College, Canada</strong> | Sept 2021 – Aug 2022</p>
+                            <p>Focused on AI Fundamentals, Deep Learning, and Natural Language Processing.</p>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="education-item">
+                            <h3>📘Bachelor of Technology in Computer Science</h3>
+                            <p><strong>📚Chitkara University, India</strong> | Aug 2016 – Jun 2020</p>
+                            <p>Key courses included Data Structures, Algorithms, Database Management, and Software Engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="achievements" class="section">
+                <div class="section-content">
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="container">
+                        <div class="achievement-item">
+                            <h3>Led Personal Data Scraping Projects</h3>
+                            <p>Spearheaded independent initiatives, including the development of a Twitter bot and the extraction of data from Amazon Audible. Transformed diverse data sources into actionable insights, contributing to comprehensive analytical endeavors.</p>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="achievement-item">
+                            <h3>Accenture's Data Analytics & Visualization Certification</h3>
+                            <p>Successfully completed rigorous training, enhancing proficiency in data analysis and visualization techniques. Demonstrated competence in leveraging advanced analytics tools for strategic decision-making.</p>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="achievement-item">
+                            <h3>Created 20+ Tableau Dashboards</h3>
+                            <p>Designed and implemented over 20 Tableau dashboards, unlocking valuable insights and trends from complex datasets. These dashboards significantly enhanced strategic decision-making processes across various domains.</p>
+                        </div>
+                    </div>
+            
+                    <div class="container">
+                        <div class="achievement-item">
+                            <h3>Engineered Predictive NBA Model</h3>
+                            <p>Developed a predictive model utilizing Python to analyze extensive NBA data. Achieved 89% accuracy in identifying MVP contenders by employing advanced techniques such as Logistic Regression, Random Forests, and KNN algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <img src="{{ url_for('static', filename='BYE.png') }}" alt="Bugs Bunny" class="bugs-bunny-image">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle image changes and active section highlighting -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navItems = document.querySelectorAll(".nav-card");
+            const fixedImage = document.getElementById("fixed-image");
+
+            // Array of image sources corresponding to each section
+            const images = [
+                "{{ url_for('static', filename='meme1.png') }}", // Professional Summary
+                "{{ url_for('static', filename='meme2.png') }}", // Technical Skills
+                "{{ url_for('static', filename='meme3.png') }}", // Work Experience
+                "{{ url_for('static', filename='meme4.png') }}", // Education
+                "{{ url_for('static', filename='meme5.png') }}"  // Achievements
+            ];
+
+            window.addEventListener("scroll", function () {
+                let current = "";
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute("id");
+                        // Change the image source based on the current section
+                        fixedImage.src = images[index];
+                    }
+                });
+
+                navItems.forEach(navItem => {
+                    navItem.classList.remove("active");
+                    if (navItem.querySelector("a").getAttribute("href") === `#${current}`) {
+                        navItem.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Dark background */
+    color: white; /* Default text color */
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #222; /* Slightly lighter than background */
+    color: #ffc107; /* Yellow color for text */
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.location {
+    color: azure;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 80px; 
+}
+
+.location i {
+    color: red; 
+    margin-right: 5px; 
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.profile h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    color: white; /* White color for the name */
+}
+
+.profile p {
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.nav-links {
+    margin-top: 20px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nav-card {
+    background-color: #333; /* Darker background for nav items */
+    margin: 10px 0;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-card a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-card:hover {
+    background-color: #444; /* Highlight on hover */
+}
+
+/* Active state styling */
+.nav-card.active {
+    background-color: #ffc107; /* Yellow background for active state */
+    color: black; /* Black text for active state */
+}
+
+.nav-card.active a {
+    color: black; /* Ensure the link text is black in the active state */
+}
+
+.resume-button {
+    display: block;
+    background-color: #444; /* Dark background for buttons */
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+.social-media-icons img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.social-links a {
+    display: block;
+    color: #ffc107; /* Yellow color */
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white; /* White color on hover */
+}
+
+.contact-button {
+    display: block;
+    background-color: #444; /* Dark background for buttons */
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 30px 0;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fixed-image-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 180px; /* Increased size of the fixed image */
+    height: auto;
+    z-index: 1000;
+}
+
+.fixed-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.section {
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.section h2.section-title {
+    font-size: 36px;
+    color: #ffc107; /* Yellow color for section titles */
+    margin-bottom: 20px;
+}
+
+.section .section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white; /* White color for body text */
+}
+
+.section-visual {
+    width: 250px; /* Larger size for the image above professional summary */
+    position: absolute;
+    top: 20px;
+    left: 10px; /* Adjusted position */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li:before {
+    content: "•";
+    color: #ffc107; /* Yellow color for bullets */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.bugs-bunny-image {
+    display: block;
+    margin: 5px auto; /* Centers the image and adds space around it */
+    width: 150px; /* Adjust the width to make the image smaller */
+    height: auto; /* Ensures the aspect ratio is maintained */
+}
+
+background-color: #f5f5f5; /* Light gray background */
+padding: 15px; /* Add some padding inside the container */
+margin-bottom: 20px; /* Add space between containers */
+border-radius: 5px; /* Rounded corners for a softer look */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.job h3 {
+color: #333; /* Darker color for job titles */
+margin-top: 0; /* Remove top margin for a cleaner look */
+}
+
+.job p {
+color: #555; /* Slightly lighter text for the paragraphs */
+}
