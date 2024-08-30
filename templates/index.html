@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container">
+        <button id="toggle-sidebar" class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
         <!-- Sidebar -->
         <nav class="sidebar">
             <div class="profile">
@@ -57,20 +60,22 @@
             <a href="{{ url_for('contact') }}" class="contact-button">Contact Me</a>
         </nav>
 
-        <!-- Main Content Area -->
+        <!-- Main Area -->
         <div class="content">
             <div class="fixed-image-container">
                 <img src="{{ url_for('static', filename='meme1.png') }}" id="fixed-image" alt="Meme Image">
             </div>
-
+        
             <section id="summary" class="section">
-                <img src="{{ url_for('static', filename='meme0.png') }}" alt="Professional Summary Visual" class="section-visual">
                 <div class="section-content">
-                    <h2 class="section-title">Professional Summary</h2>As a seasoned Analyst with over 3.5 years under my belt, I have a knack for turning complex data puzzles into clear, actionable strategies that fuel business growth. Whether it's boosting customer loyalty, smashing sales goals, or fine-tuning marketing tactics, I'm your go-to for data-driven success. Fluent in Python, SQL, and Tableau, I'm all about diving into the data to uncover insights that make a difference. My insatiable curiosity keeps me on my toes, always eager to learn and embrace new technologies. I'm on the lookout for fresh opportunities where I can flex my analytical muscles and push the boundaries of what's possible.
-                <br> <br>
-                    And just for kicks: Why did the data analyst bring a ladder to work? Because they wanted to reach the high levels of data! 🚀</p>
+                    <img src="{{ url_for('static', filename='meme0.png') }}" alt="Professional Summary Visual" class="memoji-inline">
+                    <h2 class="section-title">Professional Summary</h2>
+                    As a seasoned Analyst with over 3.5 years under my belt, I have a knack for turning complex data puzzles into clear, actionable strategies that fuel business growth. Whether it's boosting customer loyalty, smashing sales goals, or fine-tuning marketing tactics, I'm your go-to for data-driven success. Fluent in Python, SQL, and Tableau, I'm all about diving into the data to uncover insights that make a difference. My insatiable curiosity keeps me on my toes, always eager to learn and embrace new technologies. I'm on the lookout for fresh opportunities where I can flex my analytical muscles and push the boundaries of what's possible.
+                    <br><br>
+                    And just for kicks: Why did the data analyst bring a ladder to work? Because they wanted to reach the high levels of data! 🚀
                 </div>
             </section>
+    
             <section id="skills" class="section">
                 <div class="section-content">
                     <h2 class="section-title">Technical Skills</h2>
@@ -250,15 +255,17 @@
             </section>
         </div>
     </div>
+    
+    <!-- Script -->
 
-    <!-- JavaScript to handle image changes and active section highlighting -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll("section");
             const navItems = document.querySelectorAll(".nav-card");
             const fixedImage = document.getElementById("fixed-image");
-
-            // Array of image sources corresponding to each section
+            const toggleSidebarButton = document.getElementById("toggle-sidebar");
+            const sidebar = document.querySelector(".sidebar");
+    
             const images = [
                 "{{ url_for('static', filename='meme1.png') }}", // Professional Summary
                 "{{ url_for('static', filename='meme2.png') }}", // Technical Skills
@@ -266,19 +273,18 @@
                 "{{ url_for('static', filename='meme4.png') }}", // Education
                 "{{ url_for('static', filename='meme5.png') }}"  // Achievements
             ];
-
+    
             window.addEventListener("scroll", function () {
                 let current = "";
-
+    
                 sections.forEach((section, index) => {
                     const sectionTop = section.offsetTop;
                     if (pageYOffset >= sectionTop - 60) {
                         current = section.getAttribute("id");
-                        // Change the image source based on the current section
                         fixedImage.src = images[index];
                     }
                 });
-
+    
                 navItems.forEach(navItem => {
                     navItem.classList.remove("active");
                     if (navItem.querySelector("a").getAttribute("href") === `#${current}`) {
@@ -286,7 +292,18 @@
                     }
                 });
             });
+    
+            toggleSidebarButton.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+            });
+    
+            window.addEventListener("resize", function () {
+                if (window.innerWidth > 768) {
+                    sidebar.classList.remove("active"); 
+                }
+            });
         });
     </script>
+    
 </body>
 </html>

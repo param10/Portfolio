@@ -1,9 +1,9 @@
-body {
+ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #111; /* Dark background */
-    color: white; /* Default text color */
+    background-color: #111;
+    color: white; 
 }
 
 .container {
@@ -11,9 +11,11 @@ body {
 }
 
 .sidebar {
+    overflow-y: auto;
+    max-height: 100vh;
     width: 250px;
-    background-color: #222; /* Slightly lighter than background */
-    color: #ffc107; /* Yellow color for text */
+    background-color: #222; 
+    color: #ffc107; 
     height: 100vh;
     padding-top: 20px;
     position: fixed;
@@ -21,7 +23,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: transform 0.3s ease;
 }
+
+
+
+.sidebar::-webkit-scrollbar {
+    width: 8px; 
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
 .location {
     color: azure;
     display: flex;
@@ -47,7 +64,7 @@ body {
     font-size: 22px;
     margin-bottom: 5px;
     padding-left: 50px;
-    color: white; /* White color for the name */
+    color: white; 
 }
 
 .profile p {
@@ -63,7 +80,7 @@ body {
 }
 
 .nav-card {
-    background-color: #333; /* Darker background for nav items */
+    background-color: #333; 
     margin: 10px 0;
     padding: 20px 10px;
     text-align: center;
@@ -78,22 +95,22 @@ body {
 }
 
 .nav-card:hover {
-    background-color: #444; /* Highlight on hover */
+    background-color: #444; 
 }
 
 /* Active state styling */
 .nav-card.active {
-    background-color: #ffc107; /* Yellow background for active state */
-    color: black; /* Black text for active state */
+    background-color: #ffc107; 
+    color: black; 
 }
 
 .nav-card.active a {
-    color: black; /* Ensure the link text is black in the active state */
+    color: black; 
 }
 
 .resume-button {
     display: block;
-    background-color: #444; /* Dark background for buttons */
+    background-color: #444; 
     color: white;
     text-align: center;
     padding: 10px 15px;
@@ -105,7 +122,7 @@ body {
 }
 
 .resume-button:hover {
-    background-color: #555; /* Slightly lighter on hover */
+    background-color: #555;
 }
 
 .social-media-icons img {
@@ -115,7 +132,7 @@ body {
 
 .social-links a {
     display: block;
-    color: #ffc107; /* Yellow color */
+    color: #ffc107; 
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 18px;
@@ -124,12 +141,12 @@ body {
 }
 
 .social-links a:hover {
-    color: white; /* White color on hover */
+    color: white; 
 }
 
 .contact-button {
     display: block;
-    background-color: #444; /* Dark background for buttons */
+    background-color: #444; 
     color: white;
     text-align: center;
     padding: 10px 15px;
@@ -141,7 +158,7 @@ body {
 }
 
 .contact-button:hover {
-    background-color: #555; /* Slightly lighter on hover */
+    background-color: #555; 
 }
 .content {
     margin-left: 250px;
@@ -150,13 +167,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: 1;
 }
+
+.memoji-inline {
+    float: left; 
+    margin-right: 15px;
+    width: 100px; 
+    height: auto; 
+    border-radius: 50%; 
+}
+
 
 .fixed-image-container {
     position: fixed;
     top: 10px;
     right: 10px;
-    width: 180px; /* Increased size of the fixed image */
+    width: 180px; 
     height: auto;
     z-index: 1000;
 }
@@ -178,21 +205,21 @@ body {
 
 .section h2.section-title {
     font-size: 36px;
-    color: #ffc107; /* Yellow color for section titles */
+    color: #ffc107; 
     margin-bottom: 20px;
 }
 
 .section .section-content {
     font-size: 18px;
     line-height: 1.6;
-    color: white; /* White color for body text */
+    color: white;
 }
 
 .section-visual {
-    width: 250px; /* Larger size for the image above professional summary */
+    width: 250px; 
     position: absolute;
     top: 20px;
-    left: 10px; /* Adjusted position */
+    left: 10px; 
 }
 
 ul {
@@ -206,7 +233,7 @@ ul li {
 
 ul li:before {
     content: "•";
-    color: #ffc107; /* Yellow color for bullets */
+    color: #ffc107; 
     display: inline-block;
     width: 1em;
     margin-left: -1em;
@@ -214,23 +241,250 @@ ul li:before {
 
 .bugs-bunny-image {
     display: block;
-    margin: 5px auto; /* Centers the image and adds space around it */
-    width: 150px; /* Adjust the width to make the image smaller */
-    height: auto; /* Ensures the aspect ratio is maintained */
+    margin: 5px auto; 
+    width: 150px; 
+    height: auto; 
 }
 
-background-color: #f5f5f5; /* Light gray background */
-padding: 15px; /* Add some padding inside the container */
-margin-bottom: 20px; /* Add space between containers */
-border-radius: 5px; /* Rounded corners for a softer look */
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+background-color: #f5f5f5;
+padding: 15px; 
+margin-bottom: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .job h3 {
-color: #333; /* Darker color for job titles */
-margin-top: 0; /* Remove top margin for a cleaner look */
+color: #333; 
+margin-top: 0; 
 }
 
 .job p {
-color: #555; /* Slightly lighter text for the paragraphs */
+color: #555; 
+} */
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: #ffc107;
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(-100%);
+}
+
+.toggle-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #222;
+    color: #ffc107;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.toggle-sidebar {
+    display: none; 
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-250px); 
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #222;
+        z-index: 9;
+        overflow-y: auto; 
+    }
+
+
+    
+
+    .toggle-sidebar {
+        display: block; 
+    }
+
+    .sidebar.active {
+        transform: translateX(0); 
+    }
+
+    .content {
+        padding-left: 20px;
+    }
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.nav-links {
+    margin-top: 20px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nav-card {
+    background-color: #333;
+    margin: 10px 0;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-card a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-card:hover {
+    background-color: #444;
+}
+
+.nav-card.active {
+    background-color: #ffc107;
+    color: black;
+}
+
+.resume-button, .contact-button {
+    display: block;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover, .contact-button:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fixed-image-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 180px;
+    z-index: 1000;
+}
+
+.fixed-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.section {
+    padding: 50px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.section h2.section-title {
+    font-size: 36px;
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+.section .section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+.section-visual {
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.bugs-bunny-image {
+    display: block;
+    margin: 5px auto;
+    width: 150px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
 }
