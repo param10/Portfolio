@@ -6,7 +6,6 @@
     <title>My Projects - Param Jaswal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
-
     body {
         margin: 0;
         padding: 0;
@@ -15,33 +14,30 @@
 
     .section-content {
         width: 100%;
-        max-width: 1600px; 
+        max-width: 1500px; 
         padding: 50px 20px 0 20px;
         box-sizing: border-box;
-        overflow-y: auto;
+        margin: 0 auto;
     }
 
     .section-title {
         color: #ffcb05; 
         text-align: center;
-        margin-bottom: 80px;
-        margin-left: 180px;
+        margin-bottom: 40px;
     }
 
     .project-list {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 200px;
-        justify-content: space-between; 
+        justify-content: center;
         gap: 20px;
-
     }
 
     .project-item {
         background-color: #333333;
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
-        width: 23%; 
+        width: 23%;
         text-align: center;
         box-sizing: border-box;
         min-width: 200px;
@@ -86,18 +82,6 @@
         background-color: #444444;
     }
 
-    @media (max-width: 1200px) {
-        .project-item {
-            width: 48%; 
-        }
-    }
-
-    @media (max-width: 768px) {
-        .project-item {
-            width: 100%; 
-        }
-    }
-
     .back-button {
         position: fixed;
         top: 10px;
@@ -109,26 +93,65 @@
         border-radius: 5px;
         font-weight: bold;
         font-size: 14px;
-        z-index: 1000; /* Ensure the button is on top */
+        z-index: 1000; 
     }
-
 
     .back-button:hover {
         background-color: #ffb700;
     }
 
+    @media (max-width: 1200px) {
+        .project-item {
+            width: 48%; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-item {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+        }
+
+        .back-button {
+            padding: 5px 10px; 
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-content {
+            padding: 20px 10px;
+        }
+
+        .project-item {
+            width: 100%; 
+            margin: 0 auto;
+        }
+
+        .back-button {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .section-title {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+    }
 
     </style>
 </head>
 <body>
     <a href="{{ url_for('home') }}" class="back-button">⬅ Back</a>
 
-
     <section id="projects" class="section">
         <div class="section-content">
             <h2 class="section-title">Projects Undertaken</h2>
             <div class="project-list">
-                                
                 <div class="project-item">
                     <img src="{{ url_for('static', filename='Project1.jpg') }}" alt="Project 1 Image">
                     <h3>Medium Article: A Data-Driven Approach to Dealership Analysis</h3>
@@ -152,29 +175,14 @@
                     <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
                     <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
                 </div>
+
                 <div class="project-item">
                     <img src="{{ url_for('static', filename='Project4.jpg') }}" alt="Project4 Image">
                     <h3>Medium Article: A dive into Python Concurrency Project for Stocks</h3>
-                    <p> comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
+                    <p> Comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
                     <a href="https://medium.com/@theparamjaswal/a-dive-into-python-threading-33c7b6d9012b" target="_blank">Read on Medium</a>
                     <a href="https://github.com/param10/Concurrency.git" target="_blank">View on Github</a>
                 </div>
-
-                <!-- <div class="project-item">
-                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3 Image">
-                    <h3>Medium Article: Unveiling Shopping Patterns: A Dive into Market Basket Analysis</h3>
-                    <p>A guide to Market Basket Analysis, with a dataset which I found perfect to work on the Apriori Algorithm and the Association Rules.</p>
-                    <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
-                    <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
-                </div>
-                <div class="project-item">
-                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3 Image">
-                    <h3>Medium Article: Unveiling Shopping Patterns: A Dive into Market Basket Analysis</h3>
-                    <p>A guide to Market Basket Analysis, with a dataset which I found perfect to work on the Apriori Algorithm and the Association Rules.</p>
-                    <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
-                    <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
-                </div> -->
-                <!-- Add more projects as needed -->
             </div>
         </div>
     </section>
