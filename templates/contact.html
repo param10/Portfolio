@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
         .contact-section {
             display: flex;
             flex-direction: column;
@@ -17,6 +23,7 @@
             background-color: #1e1e1e; 
             color: #f1f1f1; 
             padding: 20px;
+            box-sizing: border-box;
         }
 
         .contact-container {
@@ -26,7 +33,6 @@
             width: 90%; 
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px 0;
         }
 
         .bugs-bunny-container, .contact-details {
@@ -38,10 +44,6 @@
         .bugs-bunny-image {
             max-width: 100%; 
             height: auto;
-        }
-
-        .contact-details {
-            text-align: center; 
         }
 
         .contact-details .section-title {
@@ -58,10 +60,10 @@
             margin-top: 20px;
             display: flex;
             justify-content: center;
+            gap: 15px; /* Adds space between the icons */
         }
 
         .social-media-icons a {
-            margin: 0 10px;
             font-size: 24px;
             color: #f1f1f1; 
             text-decoration: none;

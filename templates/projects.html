@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Param Jaswal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    .section-content {
+        width: 100%;
+        max-width: 1600px; 
+        padding: 50px 20px 0 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    .section-title {
+        color: #ffcb05; 
+        text-align: center;
+        margin-bottom: 80px;
+        margin-left: 180px;
+    }
+
+    .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 200px;
+        justify-content: space-between; 
+        gap: 20px;
+
+    }
+
+    .project-item {
+        background-color: #333333;
+        padding: 20px;
+        border-radius: 8px;
+        width: 23%; 
+        text-align: center;
+        box-sizing: border-box;
+        min-width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .project-item img {
+        max-width: 100%;
+        height: auto; 
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .project-item h3 {
+        color: #ffcb05;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+
+    .project-item p {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+        flex-grow: 1;
+    }
+
+    .project-item a {
+        text-decoration: none;
+        color: #ffcb05; 
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        background-color: #222222;
+        margin-bottom: 5px;
+    }
+
+    .project-item a:hover {
+        background-color: #444444;
+    }
+
+    @media (max-width: 1200px) {
+        .project-item {
+            width: 48%; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-item {
+            width: 100%; 
+        }
+    }
+
+    .back-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px 20px;
+        background-color: #ffcb05;
+        color: #000;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .back-button:hover {
+        background-color: #ffb700;
+    }
+
+
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('home') }}" class="back-button">⬅ Back</a>
+
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2 class="section-title">Projects Undertaken</h2>
+            <div class="project-list">
+                
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Project 2 Image">
+                    <h3>Medium Article: Analyzing Cryptocurrency Trends: Insights from Data Modelling</h3>
+                    <p>This project delves into the intricacies of cryptocurrency price movements.</p>
+                    <a href="https://medium.com/@theparamjaswal/analyzing-cryptocurrency-trends-insights-from-advanced-data-modelling-ed5e83ca921e" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/Crypto-Project.git" target="_blank">View on Github</a>
+                </div>
+                
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='project1.jpg') }}" alt="Project 1 Image">
+                    <h3>Medium Article: A Data-Driven Approach to Dealership Analysis</h3>
+                    <p>This article analyzes dealership data and demonstrates how data science transforms raw data into valuable insights.</p>
+                    <a href="https://medium.com/@theparamjaswal/unlocking-insights-in-automotive-sales-a-data-driven-approach-to-dealership-analysis-e0e3b040210d" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/Dealership-Analysis.git" target="_blank">View on Github</a>
+                </div>
+
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3 Image">
+                    <h3>Medium Article: Unveiling Shopping Patterns: A Dive into Market Basket Analysis</h3>
+                    <p>A guide to Market Basket Analysis, with a dataset which I found perfect to work on the Apriori Algorithm and the Association Rules.</p>
+                    <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='project4.jpg') }}" alt="Project 3 Image">
+                    <h3>Medium Article: A dive into Python Concurrency Project for Stocks</h3>
+                    <p> comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
+                    <a href="https://medium.com/@theparamjaswal/a-dive-into-python-threading-33c7b6d9012b" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/Concurrency.git" target="_blank">View on Github</a>
+                </div>
+
+                <!-- <div class="project-item">
+                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3 Image">
+                    <h3>Medium Article: Unveiling Shopping Patterns: A Dive into Market Basket Analysis</h3>
+                    <p>A guide to Market Basket Analysis, with a dataset which I found perfect to work on the Apriori Algorithm and the Association Rules.</p>
+                    <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
+                </div>
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3 Image">
+                    <h3>Medium Article: Unveiling Shopping Patterns: A Dive into Market Basket Analysis</h3>
+                    <p>A guide to Market Basket Analysis, with a dataset which I found perfect to work on the Apriori Algorithm and the Association Rules.</p>
+                    <a href="https://medium.com/@theparamjaswal/unveiling-shopping-patterns-a-dive-into-market-basket-analysis-8aefb05c94c2" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/MarketBasketAnalysis.git" target="_blank">View on Github</a>
+                </div> -->
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Param's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABGElEQVQ4jb2TsUoDQRSGv8mPgICYSQYpLgLSVQEUKJWE3FIHVkbUfoCB6ED6JWVhYEEsFH2Lq2ikphFSJVpoGI7xG3mXMu+bd/eydtASkJKPwPUgl+txScAy/PA3zIWLpT7ryujfGJLGy1lAE7ATyxBcAgN6IHugjLPbftMAxfAE8AicARALut7OogV3WePyBkA7sAVxF2KMC+KH2AdJdYCpAOvKgf5xHgSbDF+TgJ/WPzWYxHYAHlGPziYA5yoBfwUtt3YSO0VhfrlbS3Yt1wLbhiWfgDPlqjG68yAL/JiJ5GHlsQtUby+TKBfRg6OlA89YtdAd4Z6pSGJHCS/MdU+lLW0GNiJ9DwAAAABJRU5ErkJggg==" type="image/png">
 </head>
+
+
 <body>
     <div class="container">
         <button id="toggle-sidebar" class="toggle-sidebar">
@@ -41,7 +43,11 @@
                     <a href="#achievements">Achievements</a>
                 </div>
             </div>
-            
+
+            <div class="nav-card" id="nav-projects">
+                <a href="{{ url_for('projects') }}">Projects</a>
+            </div>
+
             <a href="{{ url_for('static', filename='Resume.pdf') }}" class="resume-button" download>Download Resume</a>
 
             <div class="social-media-icons">
