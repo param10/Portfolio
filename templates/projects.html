@@ -34,23 +34,26 @@
     }
 
     .project-item {
-        background-color: #333333;
-        padding: 10px;
-        border-radius: 8px;
-        width: 23%;
-        text-align: center;
-        box-sizing: border-box;
-        min-width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 8px;
+    width: 23%;
+    text-align: center;
+    box-sizing: border-box;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
     }
 
     .project-item img {
         max-width: 100%;
-        height: auto; 
+        height: auto;
         border-radius: 8px;
         margin-bottom: 10px;
+        object-fit: cover;
+        aspect-ratio: 30/30; 
     }
 
     .project-item h3 {
@@ -179,26 +182,30 @@
                 <div class="project-item">
                     <img src="{{ url_for('static', filename='Project4.jpg') }}" alt="Project4 Image">
                     <h3>Medium Article: A dive into Python Concurrency Project for Stocks</h3>
-                    <p> Comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
+                    <p>Comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
                     <a href="https://medium.com/@theparamjaswal/a-dive-into-python-threading-33c7b6d9012b" target="_blank">Read on Medium</a>
                     <a href="https://github.com/param10/Concurrency.git" target="_blank">View on Github</a>
                 </div>
 
+
                 <div class="project-item">
                     <img src="{{ url_for('static', filename='Project5.jpg') }}" alt="Project5 Image">
-                    <h3>Medium Article: A dive into Python Concurrency Project for Stocks</h3>
-                    <p> Comprehensive guide outlining the process of threading over a project involving web scraping and subsequent database storage.</p>
+                    <h3>Medium Article: Cracking the Code of Home Prices: Insights from a Kaggle Competition</h3>
+                    <p>If you’re into data, curious about real estate, or just looking for something fun to do, stick around — this might be right up your alley.</p>
                     <a href="https://medium.com/@theparamjaswal/cracking-the-code-of-home-prices-insights-from-a-kaggle-competition-859e9a145910" target="_blank">Read on Medium</a>
                     <a href="https://github.com/param10/HousePrediction.git" target="_blank">View on Github</a>
                 </div>
-
-
-
-
-
                 
+                <div class="project-item">
+                    <img src="{{ url_for('static', filename='Project6.jpg') }}" alt="Project6 Image">
+                    <h3>Medium Article: Transforming Data into Care: A Deep Dive into Nursing Homes</h3>
+                    <p>Staffing Challenges in U.S. Nursing Homes: A Data-Driven Approach.</p>
+                    <a href="https://medium.com/@theparamjaswal/transforming-data-into-care-a-deep-dive-into-nursing-homes-9299b116deff" target="_blank">Read on Medium</a>
+                    <a href="https://github.com/param10/NursingHouse_Analysis.git" target="_blank">View on Github</a>
+                </div>           
             </div>
         </div>
     </section>
 </body>
 </html>
+
